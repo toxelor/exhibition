@@ -1,0 +1,38 @@
+.imageLabel {
+    background-color: #e60023;
+    padding: 10px 10px;
+    color: #fff;
+    border-radius: 30px;
+    cursor: pointer;
+
+}
+
+.imageUpload {
+    opacity: 0;
+}
+
+.imageUploadWrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.inputWrapper{
+    position: relative;
+}
+
+.inputLabel {
+    position: absolute;
+    top: 7px;
+    z-index: 3;
+    left: 7px;
+}
+
+.inputName {
+    padding-left: 124px;
+}
+
+.saveButton {
+    position: fixed;
+    bottom: 30px;
+    z-index: 5;
+}

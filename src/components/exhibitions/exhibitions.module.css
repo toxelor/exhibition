@@ -1,0 +1,28 @@
+.exhibitionsWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+
+.exhibitWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: 200ms;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #efefef;
+}
+
+.exhibitWrapper:hover {
+    box-shadow: 0px 0px 5px #00000025;
+    transform: scale(1.05);
+}
+
+.exhibitTitle {
+    color: #000;
+    text-decoration: none;
+}

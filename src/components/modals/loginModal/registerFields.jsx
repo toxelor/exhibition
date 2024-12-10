@@ -1,7 +1,7 @@
 import { Button, Input } from "antd"
-import { openNotification } from "../helpers/notification"
+import { openNotification } from "../../helpers/notification"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import { auth } from "../../firebase/firebase"
+import { auth } from "../../../firebase/firebase"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import s from './loginFields.module.css'

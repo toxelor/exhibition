@@ -2,8 +2,8 @@ import { Button, Modal } from "antd"
 import { LoginFields } from "./loginFields"
 import { RegisterFields } from "./registerFields"
 import { signInWithPopup } from "firebase/auth"
-import { auth, googleProvider } from "../../firebase/firebase"
-import { openNotification } from "../helpers/notification"
+import { auth, googleProvider } from "../../../firebase/firebase"
+import { openNotification } from "../../helpers/notification"
 import { useNavigate } from "react-router-dom"
 
 export const LoginModal = ({open, setOpen}) => {
