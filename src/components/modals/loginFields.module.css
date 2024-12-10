@@ -1,0 +1,14 @@
+.loginWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px;
+    gap: 30px;
+}
+
+.switch {
+    color: #e60023;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 30px;
+}

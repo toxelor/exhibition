@@ -1,0 +1,26 @@
+.navbarWrapper {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    box-sizing: border-box;
+    padding: 38px 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-right: 1px solid rgb(233, 233, 233);
+}
+
+.topBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.navIcon {
+    font-size: 20px;
+    cursor: pointer;
+    color: #000;
+}
