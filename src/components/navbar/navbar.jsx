@@ -14,10 +14,12 @@ export const Navbar = () => {
         <div className={s.navbarWrapper}>
             <div className={s.topBlock}>
                 <Link to={'/'}><HomeOutlined className={s.navIcon}/></Link>
-                <Link to={'/create-exhibit'}><PlusCircleOutlined className={s.navIcon}/></Link>
+                {auth?.currentUser && 
+                <Link to={'/create-exhibit'}><PlusCircleOutlined className={s.navIcon}/></Link>}
             </div>
             <div className={s.bottomBlock}>
-                <LogoutOutlined onClick={logOut} className={s.navIcon}/>
+                {auth?.currentUser && 
+                <LogoutOutlined onClick={logOut} className={s.navIcon}/>}
             </div>
         </div>
     )
