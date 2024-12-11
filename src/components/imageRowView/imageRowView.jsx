@@ -3,7 +3,7 @@ import s from './imageRowView.module.css'
 import { auth, db } from '../../firebase/firebase'
 import { HeartFilled, HeartOutlined } from '@ant-design/icons'
 import { useEffect, useState } from 'react'
-import { collection, doc, getDoc, updateDoc } from 'firebase/firestore'
+import { collection, doc, getDoc, setDoc, updateDoc } from 'firebase/firestore'
 import { useParams } from 'react-router-dom'
 export const ImageRowView = ({urlList}) => {
     const id = useParams().id
@@ -25,7 +25,13 @@ export const ImageRowView = ({urlList}) => {
     useEffect(() => {
         const fetchLikes = async () => {
             const snapshot = await getDoc(doc(db, 'users', auth?.currentUser?.uid))
-            const data = snapshot.data()
+            let data = snapshot.data()
+            if (!data) {
+                await setDoc(doc(db, 'users', auth?.currentUser?.uid), {
+                    liked: []
+                })
+                data = []
+            }
             setAllLiked([...data.liked])
             if (data.liked.includes(id)) {
                 setLiked(true)

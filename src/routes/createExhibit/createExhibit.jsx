@@ -79,7 +79,7 @@ export const CreateExhibit = () => {
                 </div>
                 <div className={s.imageUploadWrapper}>
                     <label className={s.imageLabel} htmlFor="image_uploads"><PlusOutlined /></label>
-                    <input className={s.imageUpload} id="image_uploads" onChange={(e) => {setFileList([...fileList, e.target.files[0]])}} type="file" accept="image/*"/>
+                    <input className={s.imageUpload} id="image_uploads" onChange={(e) => {if (e.target.files[0]) setFileList([...fileList, e.target.files[0]])}} type="file" accept="image/*"/>
                 </div>
                 <ImageRow 
                     fileList={fileList}

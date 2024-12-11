@@ -36,7 +36,7 @@ export const MainPage = () => {
     }, []);
 
     useEffect(() => {
-        setExhibits([...allExgibits.filter((element) => element.title.includes(filter))])
+        setExhibits([...allExgibits.filter((element) => element.title.toLocaleLowerCase().includes(filter.toLocaleLowerCase()))])
     }, [filter])
 
     return (
