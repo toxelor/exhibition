@@ -17,7 +17,7 @@
     background-color: #f1f1f1;
     border: none;
     border-radius: 15px;
-    padding: 15px 37px;
+    padding: 15px 141px;
     color: rgb(51, 51, 51);
     box-sizing: border-box;
     font-size: 16px;
@@ -40,7 +40,7 @@
 
 .searchIcon {
     position: absolute;
-    top: 15px;
+    top: 14px;
     left: 13px;
     color: #6E6E6E;
 }
@@ -76,4 +76,8 @@
 
 .headerRegister:hover {
     background-color: #e2e2e2;
+}
+
+.headerTitle {
+    font-size: 30px;
 }

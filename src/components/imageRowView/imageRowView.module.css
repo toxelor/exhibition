@@ -1,0 +1,23 @@
+.imageRow {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.imageWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.imageRowWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.imageRowLike {
+    fill: red;
+    font-size: 30px;
+}

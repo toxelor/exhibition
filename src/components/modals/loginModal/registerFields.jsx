@@ -1,10 +1,11 @@
 import { Button, Input } from "antd"
 import { openNotification } from "../../helpers/notification"
 import { createUserWithEmailAndPassword } from "firebase/auth"
-import { auth } from "../../../firebase/firebase"
+import { auth, db } from "../../../firebase/firebase"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import s from './loginFields.module.css'
+import { addDoc, collection, doc, setDoc } from "firebase/firestore"
 
 
 export const RegisterFields = ({ switchFields }) => {
@@ -23,8 +24,12 @@ export const RegisterFields = ({ switchFields }) => {
         } else {
             try {
                 await createUserWithEmailAndPassword(auth, email, password1)
+                await setDoc(doc(db, 'users', auth?.currentUser?.uid), {
+                    liked: []
+                })
                 navigate('/loading')
             } catch (error) {
+                console.log(error)
                 openNotification({type: 'error', message: "Что-то пошло не так, проверьте правильность введённых данных"})
             }
         }

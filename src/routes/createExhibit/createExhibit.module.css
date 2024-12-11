@@ -1,6 +1,6 @@
 .imageLabel {
     background-color: #e60023;
-    padding: 10px 10px;
+    padding: 10px 12px;
     color: #fff;
     border-radius: 30px;
     cursor: pointer;
@@ -28,7 +28,7 @@
 }
 
 .inputName {
-    padding-left: 124px;
+    padding-left: 135px;
 }
 
 .saveButton {
